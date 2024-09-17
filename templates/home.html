@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home Page{% endblock title %}
+{% block style_link %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">{% endblock style_link %}
+
+
+{% block body %}
+
+<section id="header" class="text-center">
+    <div class="container-fluid text-center mb-4 he">
+        <img class="im" src="{% static 'images/logo3.png' %}" alt="">
+        <h1 class="pt-5 mb-0">Millions of verified Members</h1>
+        <div class="icon_dad mt-4">
+            <div class="icons"><img class="icon" src="https://cdn-icons-png.flaticon.com/128/7542/7542151.png"
+                    data-src="https://cdn-icons-png.flaticon.com/128/7542/7542151.png" alt="Friends " title="Friends "
+                    class="lzy lazyload--done" srcset="https://cdn-icons-png.flaticon.com/128/7542/7542151.png 4x">
+                </div>
+                <p class="me-5">Best Matches </p>
+            <div class="icons"><img class="icon" src="https://cdn-icons-png.flaticon.com/128/10698/10698215.png"
+                    data-src="https://cdn-icons-png.flaticon.com/128/10698/10698215.png" alt="Shield " title="Shield "
+                    class="lzy lazyload--done" srcset="https://cdn-icons-png.flaticon.com/128/10698/10698215.png 4x">
+                </div>
+                <p class="me-5">Verified Profiles </p>
+            <div class="icons"><img class="icon" src="https://cdn-icons-png.flaticon.com/128/3064/3064197.png"
+                    data-src="https://cdn-icons-png.flaticon.com/128/3064/3064197.png" alt="Padlock " title="Padlock "
+                    class="lzy lazyload--done" srcset="https://cdn-icons-png.flaticon.com/128/3064/3064197.png 4x">
+                </div>
+                <p>100% Privacy</p>
+        </div>
+    </div>
+    <a class="btn btn-dark cp mt-0 mb-5" href="/update_profile">Update your Profile</a>
+</section>
+
+<section id="about" class="pt-5 text-center justify-content-center">
+    <h1 class="mb-4">About Us</h1>
+    <div class="container p-4 ">
+        <p>A matrimony website is an online service designed to facilitate the process of finding life partners, particularly within cultural or religious contexts. Users create detailed profiles that include personal information such as age, gender, occupation, education, religion, and family background. Most websites allow users to upload photos and provide detailed descriptions of their preferences in a partner, such as physical appearance, personality traits, education, and lifestyle choices.These platforms typically feature advanced search and filter options, enabling users to find potential matches based on specific criteria like religion, caste, language, location, profession, and more. Some matrimony websites cater to niche audiences, focusing on particular communities or regions, while others offer more generalized services for a wide variety of users.Matrimony websites often utilize algorithms that analyze user profiles and preferences to suggest compatible matches. Users are usually able to express interest in potential matches through the platform, sending messages or connecting via in-built communication tools like chats or emails. Many platforms ensure privacy by allowing users to control who can view their profiles and contact them.In addition to online interactions, some matrimony websites offer premium services, including personalized matchmaking assistance, where relationship experts curate matches based on user preferences. Many also provide resources such as relationship advice, success stories, and wedding planning tools.These websites ensure the security of personal information, using encryption and verification processes to minimize fraudulent profiles. Some platforms also conduct background checks or verify contact details to add an extra layer of authenticity.</p>
+        <a href="/logins"><button class="btn btn-primary">Know more</button></a>
+    </div>
+</section>
+
+<section id="contact">
+    <h1 class="mb-5 text-center">Contact Us</h1>
+    <div class="container d-flex h-75 gap-3 pb-5">
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.9297346477088!2d78.71703752320586!3d12.783072868987388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad08e665559619%3A0x62d25548c4536e3b!2sAmbur%20Bus%20Stand!5e0!3m2!1sen!2sin!4v1721404763305!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="container Contact_us text-black text-center p-4">
+            <form method="post">
+                {% csrf_token%}
+                <div class="mb-3">
+                    {{form.name}}
+                </div>
+                <div class="mb-3">
+                    {{form.email}}
+                </div>
+                <div class="mb-3">
+                    {{form.subject}}
+                </div>
+                <div class="mb-3">
+                    {{form.message}}
+                </div>
+                <button type="submit" class="btn btn-primary w-100 ">Submit</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<style>
+    .im {
+        mix-blend-mode: darken;
+    }
+</style>
+<script>
+    document.getElementsByTagName('input')[1].placeholder = "Enter your name"
+    document.getElementsByTagName('input')[2].placeholder = "Enter email"
+    document.getElementsByTagName('input')[3].placeholder = "Enter subject"
+    document.getElementsByTagName('textarea')[0].placeholder = "Type something..."
+</script>
+
+{% endblock body %}

@@ -1,0 +1,98 @@
+/* Body styling */
+body {
+    background: linear-gradient(135deg, #dee2ef, #c0c5d2);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Form container */
+.form {
+    margin-top: 10rem !important;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 3rem;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Form hover effect */
+.form:hover {
+    transform: translateY(-10px);
+}
+
+/* Input styling */
+input {
+    border: none;
+    padding: 12px 15px;
+    font-size: medium;
+    border-radius: 6px;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    background-color: #ffffffcc;
+    color: #333;
+    box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Input focus and hover effect */
+input:focus, input:hover {
+    box-shadow: 0px 0px 10px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #000;
+    border: none;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #1a1a1a;
+}
+
+/* Text styling */
+h1 {
+    color: #fff;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+p {
+    color: #ccc;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+a {
+    color: #f0e68c;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Link hover effect */
+a:hover {
+    color: #fff;
+}
+
+/* Alert styling */
+.alert {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 2rem;
+}
